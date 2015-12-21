@@ -222,7 +222,7 @@ bool IsRunning(){
 void UpdateMotors(){
    if (!IsRunning()) return;
    unsigned long t = micros();
-   if (aTarget > 0){    
+   if (aTarget >= 0){    
      long dif = aTime - t;
      if (dif < 0){
        aTime += abs(aInterval);
